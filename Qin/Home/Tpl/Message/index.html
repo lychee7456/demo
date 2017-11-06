@@ -1,0 +1,38 @@
+<!DOCTYPE html
+
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" >
+<html>
+<head>
+<title>simple document</title>
+</head>
+<body>
+
+<form method="post" action='__URL__/addmessage'>
+<br><br>
+请留言:<br><br>
+<br>
+
+<textarea name="message" rows="6"cols="120"></textarea><br>
+<input type="submit">
+	
+</form>
+<br><br>
+
+    <volist name="data" id="vo">
+  
+        {$vo['username']}:
+        <br>
+        <div style="width:300px;height:100px; border:1px solid #000;">
+        {$vo['message']}
+        </div>
+<br><br><br>
+    </volist>
+
+    <div>{$page}</div><br><br>
+
+
+
+</body>
+</html>
